@@ -1,0 +1,14 @@
+# sysname	config_source	benchmark	dim	walltime
+pendulum	config.py	fn_d_all_y	2	04:00:00
+trig3d	example_config/config_3d_trig.py	fn_d_all_t	3	06:00:00
+power4d	example_config/config_4d_2bus_lossy_power.py	fn_d_all_o	4	10:00:00
+poly6d	example_config/config_6d_poly.py	fn_d_all_m	6	16:00:00
+quad6d	example_config/config_6d_quadrator.py	fn_d_all_z	6	16:00:00
+poly8d	example_config/config_8d_poly.py	fn_d_all_n	8	24:00:00
+syn9d	example_config/config_9d_syn.py	fn_d_all_l	9	24:00:00
+poly10d	example_config/config_10d_poly.py	fn_d_all_x	10	24:00:00
+vdp2d	example_config/config_vdp2d.py	fn_d_all_a	2	04:00:00
+poly2d	example_config/config_poly2d.py	fn_d_all_b	2	04:00:00
+poly3dA	example_config/config_poly3dA.py	fn_d_all_c	3	06:00:00
+poly3dB	example_config/config_poly3dB.py	fn_d_all_d	3	06:00:00
+lossless6d	example_config/config_lossless6d.py	fn_d_all_e	6	16:00:00

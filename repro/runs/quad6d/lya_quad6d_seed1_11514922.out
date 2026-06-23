@@ -1,0 +1,2 @@
+[job] sys=quad6d benchmark=fn_d_all_z seed=2 host=cn2102 gpu=0 start=2026-06-22T06:26:32-05:00
+[2026-06-22T06:26:35.965] error: *** JOB 11514922 ON cn2102 CANCELLED AT 2026-06-22T06:26:35 DUE to SIGNAL Terminated ***

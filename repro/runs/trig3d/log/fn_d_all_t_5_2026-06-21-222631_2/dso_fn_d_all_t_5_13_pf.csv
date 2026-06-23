@@ -1,0 +1,5 @@
+complexity,r,count_on_policy,count_off_policy,expression,traversal,nmse_test,nmse_test_noiseless,success
+4,0.0,0,1,[x3**2 - x3],"sub,n2,x3,x3",10.043101515935907,10.043101515935907,False
+5,0.4770990410554954,0,1,[x1*x2*x3],"mul,x2,mul,x1,x3",2.4660365804602797,2.4660365804602797,False
+6,0.9251463989632168,0,1,[(x1 + x2 - x3)**2],"n2,sub,x2,sub,x3,x1",0.012730634013981985,0.012730634013981985,False
+8,0.9768350586876076,0,1,[x2**2 - cos(x1*x3)],"sub,n2,x2,cos,mul,x1,x3",0.001232589591345391,0.001232589591345391,False

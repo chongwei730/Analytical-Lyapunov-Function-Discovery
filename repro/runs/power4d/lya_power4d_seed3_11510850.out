@@ -1,0 +1,213 @@
+[job] sys=power4d benchmark=fn_d_all_o seed=4 host=e8 gpu=0 start=2026-06-22T01:51:54-05:00
+MainProcess| 2026-06-22 01:52:01,926,926 multiprocessing INFO STARTING NEW RUN ==========
+MainProcess| 2026-06-22 01:52:01,927,927 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+MainProcess| 2026-06-22 01:52:01,927,927 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+MainProcess| 2026-06-22 01:52:01,930,930 multiprocessing INFO               variables           expression                                                                                                      train_spec test_spec function_set
+name                                                                                                                                                                               
+fn_d_all_o_5          4  0*x1+0*x2+0*x3+0*x4  {"x1":{"U":[-0.75,0.75,50000]}, "x2":{"U":[-0.75,0.75,50000]},"x3":{"U":[-2,2,50000]},"x4":{"U":[-2,2,50000]}}      None         Koza
+              variables           expression                                                                                                      train_spec test_spec function_set
+name                                                                                                                                                                               
+fn_d_all_o_5          4  0*x1+0*x2+0*x3+0*x4  {"x1":{"U":[-0.75,0.75,50000]}, "x2":{"U":[-0.75,0.75,50000]},"x3":{"U":[-2,2,50000]},"x4":{"U":[-2,2,50000]}}      None         Koza
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/power4d/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_o_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+MainProcess| 2026-06-22 01:52:01,993,993 multiprocessing INFO [BASELINE_TESTING NOW] dataset=fn_d_all_o_5 	| baseline=transformer 	| seed=4 	| data_samples=50000 	| noise=0.0
+MainProcess| 2026-06-22 01:52:01,997,997 multiprocessing INFO [RUN SETTINGS]: test_dataset=fn_d_all_o_5  batch_outer_datasets=24 pre_train=False load_pre_trained_path= priority_queue_training=True gp_meld=True model=TransformerTreeEncoderController train_path= risk_seeking_pg_train=True
+[RUN SETTINGS]: test_dataset=fn_d_all_o_5  batch_outer_datasets=24 pre_train=False load_pre_trained_path= priority_queue_training=True gp_meld=True model=TransformerTreeEncoderController train_path= risk_seeking_pg_train=True
+MainProcess| 2026-06-22 01:52:02,030,30 multiprocessing INFO Running model : TransformerTreeEncoderController
+Running model : TransformerTreeEncoderController
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/power4d/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_o_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+MainProcess| 2026-06-22 01:52:02,040,40 multiprocessing INFO Function set: ['x1', 'x2', 'x3', 'x4', 'add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/power4d/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_o_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- BUILDING PRIOR START -------------
+WARNING: Skipping invalid 'RelationalConstraint' with arguments {'targets': [], 'effectors': [], 'relationship': None}. Reason: Prior disabled.
+WARNING: Skipping invalid 'RepeatConstraint' with arguments {'tokens': 'const', 'min_': None, 'max_': 5}. Reason: Uses Tokens not in the Library.
+WARNING: Skipping invalid 'InverseUnaryConstraint' with arguments {}. Reason: There are no inverse unary Token pairs in the Library.
+WARNING: Skipping invalid 'ConstConstraint' with arguments {}. Reason: Prior disabled.
+WARNING: Skipping invalid 'NoInputsConstraint' with arguments {}. Reason: All terminal tokens are input variables, so allsequences will have an input variable.
+WARNING: Skipping invalid 'UniformArityPrior' with arguments {}. Reason: Prior disabled.
+LengthConstraint: Sequences have minimum length 10.
+                  Sequences have maximum length 15.
+TrigConstraint: [sin, cos] cannot be a descendant of [sin, cos].
+SoftLengthPrior: No description available.
+-- BUILDING PRIOR END ---------------
+
+MainProcess| 2026-06-22 01:52:02,624,624 multiprocessing INFO Transformer overwriting hidden size to input_dim 128
+Transformer overwriting hidden size to input_dim 128
+MainProcess| 2026-06-22 01:52:02,832,832 multiprocessing INFO Encoder params: {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}
+Encoder params: {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}
+MainProcess| 2026-06-22 01:52:02,841,841 multiprocessing INFO TransformerTreeEncoderController parameters: 4035606 	 | trainable : 4035606
+TransformerTreeEncoderController parameters: 4035606 	 | trainable : 4035606
+MainProcess| 2026-06-22 01:52:02,933,933 multiprocessing INFO GP CONFIG : {'verbose': False, 'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}
+GP CONFIG : {'verbose': False, 'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}
+MainProcess| 2026-06-22 01:52:03,076,76 multiprocessing INFO config: {'experiment': {'logdir': './log', 'seed': 13, 'timestamp': '2026-06-22-015202', 'task_name': 'fn_d_all_o_5', 'save_path': './log/fn_d_all_o_5_2026-06-22-015202_4'}, 'task': {'task_type': 'regression', 'dataset': 'fn_d_all_o_5', 'function_set': ['add', 'sub', 'mul', 'sin', 'cos', 'n2'], 'metric': 'lyapunov_risk', 'metric_params': [1.0], 'extra_metric_test': None, 'extra_metric_test_params': [], 'threshold': 1e-12, 'protected': False, 'reward_noise': 0.0, 'reward_noise_type': 'r', 'normalize_variance': False, 'decision_tree_threshold_set': []}, 'training': {'n_epochs': None, 'n_samples': 2000000, 'batch_size': 500, 'epsilon': 0.1, 'baseline': 'R_e', 'alpha': 0.5, 'b_jumpstart': False, 'n_cores_batch': 1, 'complexity': 'token', 'const_optimizer': 'scipy', 'const_params': {'method': 'L-BFGS-B', 'options': {'gtol': 0.001}}, 'verbose': True, 'debug': 0, 'early_stopping': True, 'hof': 100, 'use_memory': False, 'memory_capacity': 1000.0, 'warm_start': None, 'memory_threshold': None, 'save_all_epoch': False, 'save_summary': False, 'save_positional_entropy': False, 'save_pareto_front': True, 'save_cache': False, 'save_cache_r_min': 0.9, 'save_freq': 1, 'save_token_count': False}, 'state_manager': {'observe_action': False, 'observe_parent': True, 'observe_sibling': True, 'observe_dangling': False, 'embedding': True, 'embedding_size': 64}, 'controller': {'max_length': 64, 'cell': 'lstm', 'num_layers': 1, 'num_units': 64, 'initializer': 'zeros', 'learning_rate': 0.0003, 'optimizer': 'adam', 'entropy_weight': 0.005, 'entropy_gamma': 0.8, 'pqt': True, 'pqt_k': 10, 'pqt_batch_size': 1, 'pqt_weight': 200.0, 'pqt_use_pg': False, 'summary': False, 'rl_weight': 1.0}, 'gp_meld': {'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}, 'prior': {'relational': {'targets': [], 'effectors': [], 'relationship': None}, 'length': {'min_': 10, 'max_': 15}, 'repeat': {'tokens': 'const', 'min_': None, 'max_': 5}, 'inverse': {}, 'trig': {}, 'const': {}, 'no_inputs': {}, 'uniform_arity': {}, 'soft_length': {'loc': 10, 'scale': 5}}, 'postprocess': {'show_count': 5, 'save_plots': True}, 'model': 'TransformerTreeEncoderController', 'function_names_str': 'x1,x2,x3,x4,add,sub,mul,sin,cos,n2', 'nesymres_train_config': {'architecture': {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}}}
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/power4d/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_o_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- RUNNING EPOCHS START -------------
+torch.Size([500, 128])
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+MainProcess| 2026-06-22 01:52:47,434,434 multiprocessing INFO Genetic Porgramming Runtime 41.220118910074234
+Genetic Porgramming Runtime 41.220118910074234
+
+=========================PGD Collection Starts=========================
+
+MainProcess| 2026-06-22 01:52:48,019,19 multiprocessing INFO created temp directory /tmp/pymp-69lw_ewx
+SpawnPoolWorker-9| 2026-06-22 01:52:50,954,954 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-1| 2026-06-22 01:52:50,954,954 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-9| 2026-06-22 01:52:50,954,954 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-8| 2026-06-22 01:52:50,954,954 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-1| 2026-06-22 01:52:50,954,954 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-9| 2026-06-22 01:52:50,954,954 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-1| 2026-06-22 01:52:50,954,954 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-8| 2026-06-22 01:52:50,954,954 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-3| 2026-06-22 01:52:50,954,954 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-8| 2026-06-22 01:52:50,955,955 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-3| 2026-06-22 01:52:50,955,955 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-3| 2026-06-22 01:52:50,955,955 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-3| 2026-06-22 01:52:50,956,956 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-9| 2026-06-22 01:52:50,956,956 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-1| 2026-06-22 01:52:50,956,956 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-8| 2026-06-22 01:52:50,956,956 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-4| 2026-06-22 01:52:50,960,960 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-4| 2026-06-22 01:52:50,960,960 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-4| 2026-06-22 01:52:50,960,960 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-4| 2026-06-22 01:52:50,961,961 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-7| 2026-06-22 01:52:50,971,971 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-7| 2026-06-22 01:52:50,971,971 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-5| 2026-06-22 01:52:50,971,971 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-7| 2026-06-22 01:52:50,971,971 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-5| 2026-06-22 01:52:50,971,971 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-5| 2026-06-22 01:52:50,971,971 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-7| 2026-06-22 01:52:50,972,972 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-5| 2026-06-22 01:52:50,972,972 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-2| 2026-06-22 01:52:50,974,974 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-2| 2026-06-22 01:52:50,974,974 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-2| 2026-06-22 01:52:50,974,974 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-2| 2026-06-22 01:52:50,975,975 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-10| 2026-06-22 01:52:50,976,976 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-10| 2026-06-22 01:52:50,976,976 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-10| 2026-06-22 01:52:50,976,976 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-10| 2026-06-22 01:52:50,978,978 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-6| 2026-06-22 01:52:51,038,38 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-6| 2026-06-22 01:52:51,038,38 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-6| 2026-06-22 01:52:51,038,38 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-6| 2026-06-22 01:52:51,039,39 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-1| 2026-06-22 01:53:35,524,524 multiprocessing INFO process shutting down
+SpawnPoolWorker-2| 2026-06-22 01:53:35,524,524 multiprocessing INFO process shutting down
+SpawnPoolWorker-7| 2026-06-22 01:53:35,525,525 multiprocessing INFO process shutting down
+SpawnPoolWorker-10| 2026-06-22 01:53:35,525,525 multiprocessing INFO process shutting down
+SpawnPoolWorker-3| 2026-06-22 01:53:35,525,525 multiprocessing INFO process shutting down
+SpawnPoolWorker-4| 2026-06-22 01:53:35,524,524 multiprocessing INFO process shutting down
+SpawnPoolWorker-7| 2026-06-22 01:53:35,525,525 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-9| 2026-06-22 01:53:35,525,525 multiprocessing INFO process shutting down
+SpawnPoolWorker-8| 2026-06-22 01:53:35,524,524 multiprocessing INFO process shutting down
+SpawnPoolWorker-3| 2026-06-22 01:53:35,525,525 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-6| 2026-06-22 01:53:35,525,525 multiprocessing INFO process shutting down
+SpawnPoolWorker-10| 2026-06-22 01:53:35,526,526 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-9| 2026-06-22 01:53:35,526,526 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-8| 2026-06-22 01:53:35,526,526 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-6| 2026-06-22 01:53:35,526,526 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-4| 2026-06-22 01:53:35,526,526 multiprocessing INFO process exiting with exitcode 0
+(10000,)
+
+===================Collect 10000 Examples===================
+
+Epsilon 0.1
+500
+(550,)
+(550,)
+(55,)
+Number of Programs for Minimization: 28
+SpawnPoolWorker-31| 2026-06-22 01:54:24,760,760 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-31| 2026-06-22 01:54:24,760,760 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-31| 2026-06-22 01:54:24,760,760 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-31| 2026-06-22 01:54:24,764,764 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-63| 2026-06-22 01:54:25,675,675 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-63| 2026-06-22 01:54:25,675,675 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-63| 2026-06-22 01:54:25,675,675 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-63| 2026-06-22 01:54:25,701,701 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-34| 2026-06-22 01:54:25,775,775 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-34| 2026-06-22 01:54:25,776,776 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-34| 2026-06-22 01:54:25,776,776 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-41| 2026-06-22 01:54:25,836,836 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-41| 2026-06-22 01:54:25,836,836 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-41| 2026-06-22 01:54:25,836,836 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-41| 2026-06-22 01:54:25,853,853 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-34| 2026-06-22 01:54:25,921,921 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-29| 2026-06-22 01:54:27,019,19 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-29| 2026-06-22 01:54:27,020,20 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-29| 2026-06-22 01:54:27,020,20 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_o_01_log.txt
+SpawnPoolWorker-34| 2026-06-22 01:54:27,020,20 multiprocessing INFO process shutting down
+SpawnPoolWorker-34| 2026-06-22 01:54:27,020,20 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-63| 2026-06-22 01:54:27,021,21 multiprocessing INFO process shutting down
+28
+(100000, 4)
+(100000,)
+(100000, 4)
+(100000,)
+
+=======================Successfully Added (50000, 4) Counter Examples=======================
+
+
+============None of the candidates fulfill the conditions. Training CONTINUES!=================
+
+MainProcess| 2026-06-22 01:54:28,389,389 multiprocessing INFO 
+============None of the candidates fulfill the conditions. Training CONTINUES!=================
+
+
+============None of the candidates fulfill the conditions. Training CONTINUES!=================
+
+(55, 128)
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/users/9/chen8596/LyaDis/repro/runs/power4d/Lyapunov_test_dso.py", line 519, in <module>
+    main(dataset)
+  File "/users/9/chen8596/LyaDis/repro/runs/power4d/Lyapunov_test_dso.py", line 162, in main
+    result = perform_run(task_input)
+  File "/users/9/chen8596/LyaDis/repro/runs/power4d/Lyapunov_test_dso.py", line 109, in perform_run
+    result = top_main(
+  File "/users/9/chen8596/LyaDis/repro/runs/power4d/Lyapunov_test_dso.py", line 347, in top_main
+    optomize_at_test(
+  File "/users/9/chen8596/LyaDis/repro/runs/power4d/utils/train.py", line 711, in optomize_at_test
+    loss.backward()
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: CUDA error: an illegal instruction was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+MainProcess| 2026-06-22 01:54:29,272,272 multiprocessing INFO process shutting down

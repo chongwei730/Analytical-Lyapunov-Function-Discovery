@@ -1,0 +1,101 @@
+r,count_on_policy,count_off_policy,expression,traversal,nmse_test,nmse_test_noiseless,success
+1.0,0,1,[x1**2 + x2 - ((cos(x2) + cos(x3**2))**2 + cos(x3))**8],"sub,add,n2,x1,x2,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**2 - (((cos(x2) + cos(x3))**2 + cos(x1))**2 + cos(x1))**4],"sub,n2,x3,n2,n2,add,cos,x1,n2,add,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - ((cos(x1)**2 + cos(x2))**2 + cos(x3))**8],"sub,add,n2,x1,x2,n2,n2,n2,add,cos,x3,n2,add,n2,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((cos(x2) + cos(x3**2))**4 + cos(x3))**4],"sub,n2,x1,n2,n2,add,cos,x3,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - (((cos(x2) + cos(x3**2))**2 + cos(x1))**2 + cos(x3))**4],"sub,x1,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,n2,x3",0.0,0.0,True
+1.0,0,1,[-(((cos(x1) + cos(x2))**2 + cos(x1))**2 + cos(x3))**4 + cos(x1)],"sub,cos,x1,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[-(((cos(x2) + cos(x3))**2 + cos(x1))**2 + cos(x2))**4 + sin(x2)],"sub,sin,x2,n2,n2,add,cos,x2,n2,add,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(cos(x2) + 2*cos(x3**2))**16 + cos(x1)],"sub,cos,x1,n2,n2,n2,n2,add,cos,n2,x3,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((2*cos(x2) + cos(x3))**2 + cos(x3))**4],"sub,n2,x1,n2,n2,add,cos,x3,n2,add,add,cos,x3,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[-(4*cos(x2)**2 + cos(x3))**8 + cos(x1**2 + x2)],"sub,cos,add,n2,x1,x2,n2,n2,n2,add,cos,x3,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x3 - ((cos(x1**2) + cos(x2))**2 + cos(x2))**8],"sub,add,n2,x1,x3,n2,n2,n2,add,cos,x2,n2,add,cos,n2,x1,cos,x2",6.270789482263054e-05,6.270789482263054e-05,False
+1.0,0,1,[-((cos(x1) + cos(x2)**2)**2 + cos(x3))**16 + cos(x2)],"sub,cos,x2,n2,n2,n2,n2,add,cos,x3,n2,add,cos,x1,n2,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2))**2 + cos(x3))**8 + sin(x1)],"sub,sin,x1,n2,n2,n2,add,cos,x3,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x2) + cos(x3))**32 + cos(x3)**2],"sub,add,n2,x1,n2,cos,x3,n2,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (4*cos(x2)**2 + cos(x3))**32],"sub,n2,x1,n2,n2,n2,n2,n2,add,cos,x3,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2) + cos(x2**2))**2 + cos(x3))**4 + sin(x1)],"sub,sin,x1,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x2,cos,n2,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x2) + cos(x3**2))**32 + cos(x1)],"sub,add,n2,x1,cos,x1,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x2) + cos(x3)**2 + cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,cos,x3,add,n2,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(((cos(x2) + cos(x3))**2 + cos(x3))**2 + cos(x3))**4 + cos(x1)],"sub,cos,x1,n2,n2,add,cos,x3,n2,add,cos,x3,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2))**2 + cos(x3))**16 + sin(x2)],"sub,sin,x2,n2,n2,n2,n2,add,cos,x3,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x2) + cos(x3))**2 + cos(x1)**2)**8 + cos(x2)],"sub,cos,x2,n2,n2,n2,add,n2,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - (cos(x2) + cos(x3**2))**32],"sub,add,n2,x1,x2,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - (cos(x2) + cos(x3**2))**32 - sin(x3)**4],"sub,sub,x1,n2,n2,sin,x3,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + 2*cos(x2))**2 + cos(x3))**8 + sin(x1)],"sub,sin,x1,n2,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1*x2 - (16*cos(x2)**4 + cos(x3))**4],"sub,mul,x1,x2,n2,n2,add,cos,x3,n2,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((cos(x1**2) + cos(x2))**4 + cos(x3))**4],"sub,n2,x1,n2,n2,add,cos,x3,n2,n2,add,cos,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**2 - ((cos(x1) + 4*cos(x2)**2)**2 + cos(x3))**4],"sub,n2,x3,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x2*cos(x3) - (cos(x1) + cos(x2) + cos(x3**2))**8],"sub,mul,cos,x3,x2,n2,n2,n2,add,cos,x1,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (2*cos(x2) + cos(x3))**8*cos(x3)**4],"sub,n2,x1,n2,n2,mul,cos,x3,n2,add,add,cos,x3,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x1 - ((cos(x2) + cos(x3))**2 + cos(x3))**16],"sub,add,n2,x1,x1,n2,n2,n2,n2,add,cos,x3,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 + x3 - ((cos(x2) + cos(x3))**2 + cos(x3))**8],"sub,add,x1,x3,n2,n2,n2,add,cos,x3,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2*cos(x1) - ((cos(x2) + cos(x3**2))**2 + cos(x1))**8],"sub,mul,cos,x1,x2,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - ((cos(x2) + cos(x3**2))**2 + cos(x2))**8 + cos(x2)],"sub,add,x1,cos,x2,n2,n2,n2,add,cos,x2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2) + cos(x3**2))**2 + cos(x3))**4 + sin(x3)],"sub,sin,x3,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**2 - (cos(x1**4) + cos(x2))**16 + sin(x1)],"sub,add,sin,x1,n2,x3,n2,n2,n2,n2,add,cos,n2,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + 4*cos(x2)**2)**2 + cos(x3))**4 + sin(x1)],"sub,sin,x1,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[-((2*cos(x1) + cos(x2))**2 + cos(x3))**4 + sin(x3**2)],"sub,sin,n2,x3,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[x2**2 - ((cos(x2) + cos(x3))**2 + cos(x1))**8],"sub,mul,x2,x2,n2,n2,n2,add,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**2 - (cos(x1) + cos(x2) + cos(x3**2))**8 + sin(x2)],"sub,add,n2,x3,sin,x2,n2,n2,n2,add,cos,x1,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x1) + cos(x2) + cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,add,cos,x3,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[x1 - (cos(x2) + cos(x3**2))**64],"sub,x1,n2,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(cos(x2) + cos(x3**2))**32 + cos(x1**2)],"sub,cos,n2,x1,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x2) + cos(x3**2))**2 + cos(x1))**8 + cos(x3**2)],"sub,cos,n2,x3,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (((cos(x2) + cos(x3))**2 + cos(x1))**2 + cos(x3))**4],"sub,n2,x1,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[2*x1 - ((cos(x2) + cos(x3**2))**2 + cos(x1))**8],"sub,add,x1,x1,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2**2 - (((cos(x1) + cos(x2))**2 + cos(x1))**2 + cos(x3))**4],"sub,n2,x2,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - ((cos(x2) + cos(x3**2))**2 + cos(x3))**8],"sub,add,n2,x1,x2,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - ((cos(x2)**2 + cos(x3**2))**4 + cos(x3))**4],"sub,x1,n2,n2,add,cos,x3,n2,n2,add,cos,n2,x3,n2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((cos(x1**4) + cos(x2))**2 + cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,cos,x3,n2,add,cos,n2,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x2 - ((cos(x1) + cos(x2))**2 + cos(x3))**32],"sub,x2,n2,n2,n2,n2,n2,add,cos,x3,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[-(2*cos(x2) + cos(x3))**16 + cos(x1**2)],"sub,cos,n2,x1,n2,n2,n2,n2,add,add,cos,x3,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x3 - (cos(x1) + cos(x2) + cos(x3))**32],"sub,x3,n2,n2,n2,n2,n2,add,cos,x3,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[-(((cos(x2) + cos(x3))**2 + cos(x2))**2 + cos(x1))**4 + sin(x2)],"sub,sin,x2,n2,n2,add,cos,x1,n2,add,cos,x2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3 - (((cos(x1) + cos(x2))**2 + cos(x1))**2 + cos(x3))**4],"sub,x3,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[-(((cos(x1) + cos(x2))**2 + cos(x1))**2 + cos(x3))**4 + sin(x3)],"sub,sin,x3,n2,n2,add,cos,x3,n2,add,cos,x1,n2,add,cos,x2,cos,x1",0.0,0.0,True
+1.0,0,1,[x1**2 + x3**2 - (cos(x2) + cos(x2**4))**16],"sub,add,n2,x1,n2,x3,n2,n2,n2,n2,add,cos,n2,n2,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[(x1**2 + x3**2)**2 - (cos(x2) + cos(x3))**16],"sub,n2,add,n2,x1,n2,x3,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2 - (cos(x1) + cos(x2) + cos(x3))**8 + cos(x3)],"sub,add,cos,x3,x2,n2,n2,n2,add,cos,x3,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x2) + cos(x3))**16],"sub,mul,x1,x1,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((cos(x1**2) + cos(x2))**2 + cos(x3))**32],"sub,n2,x1,n2,n2,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - ((cos(x1**4) + cos(x2))**2 + cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,cos,x3,n2,add,cos,x2,cos,n2,n2,x1",0.0,0.0,True
+1.0,0,1,[x1**2 - x2 - ((cos(x2) + cos(x3**2))**2 + cos(x1))**8],"sub,sub,n2,x1,x2,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**4 - (cos(x1) + cos(x2) + cos(x3))**32],"sub,n2,n2,x3,n2,n2,n2,n2,n2,add,cos,x3,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x2) + 2*cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,cos,x3,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - x2 - (cos(x1) + cos(x2) + cos(x3))**8],"sub,sub,n2,x1,x2,n2,n2,n2,add,cos,x1,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (2*cos(x2) + cos(x3))**8*cos(x2)**4],"sub,n2,x1,n2,n2,mul,cos,x2,n2,add,add,cos,x3,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - ((cos(x2) + cos(x3**2))**2 + cos(x3))**8 + cos(x1)],"sub,add,cos,x1,x1,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(cos(x1) + cos(x2) + cos(x3**2))**8 + cos(x2)],"sub,cos,x2,n2,n2,n2,add,cos,x1,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - x1 - (cos(x1) + cos(x2) + cos(x3**2))**8],"sub,sub,n2,x1,x1,n2,n2,n2,add,cos,x1,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(cos(x1) + cos(x2) + cos(x3))**8*cos(x3)**4 + sin(x1)],"sub,sin,x1,n2,n2,mul,cos,x3,n2,add,cos,x1,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x2) + cos(x3**2))**2 + cos(x3))**16 + cos(x1)],"sub,cos,x1,n2,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2*x3 - ((cos(x2) + cos(x3))**2 + cos(x1))**8],"sub,mul,x3,x2,n2,n2,n2,add,cos,x1,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((2*cos(x1) + cos(x2))**2 + cos(x3))**8 + sin(x1)],"sub,sin,x1,n2,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x1 - (cos(x2) + cos(x3))**16],"sub,add,x1,n2,x1,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - ((4*cos(x2)**2 + cos(x2))**2 + cos(x3))**4],"sub,x1,n2,n2,add,cos,x3,n2,add,cos,x2,n2,add,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x3 - (cos(x2) + cos(x3))**16],"sub,add,x3,n2,x1,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2) + cos(x3))**2 + cos(x3))**4 + sin(x3**2)],"sub,sin,n2,x3,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x2,cos,x3",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - (cos(x2) + cos(x3**2))**64],"sub,add,n2,x1,x2,n2,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 + x2**4 - (cos(x2) + cos(x3**2))**32],"sub,add,x1,n2,n2,x2,n2,n2,n2,n2,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2 - ((cos(x1) + cos(x2))**2 + cos(x3))**8 + cos(x3)],"sub,add,cos,x3,x2,n2,n2,n2,add,cos,x3,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x2 - ((cos(x1**2) + cos(x2))**2 + cos(x3))**8 + cos(x1)],"sub,add,cos,x1,x2,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 + x2 - ((cos(x2) + cos(x3**2))**2 + cos(x3)**2)**8],"sub,add,x1,x2,n2,n2,n2,add,n2,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2))**2 + cos(x1))**8*cos(x3)**4 + sin(x1)],"sub,sin,x1,n2,n2,mul,cos,x3,n2,add,cos,x1,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - (x3 + (cos(x2) + cos(x3**2))**16)**2],"sub,add,n2,x1,x2,n2,add,n2,n2,n2,n2,add,cos,n2,x3,cos,x2,x3",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2))**4 + cos(x3))**4 + sin(x1)],"sub,sin,x1,n2,n2,add,cos,x3,n2,n2,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 - ((cos(x2) + cos(x3**2))**2 + cos(x3**2))**16],"sub,x1,n2,n2,n2,n2,add,cos,n2,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2**2 + x2 - (cos(x1) + cos(x2) + cos(x3)**2)**8],"sub,add,n2,x2,x2,n2,n2,n2,add,cos,x1,add,n2,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-(cos(x1) + cos(x2) + cos(x3))**8 + sin(x1**2 + x2)],"sub,sin,add,n2,x1,x2,n2,n2,n2,add,cos,x1,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x1 - ((cos(x2) + cos(x3))**2 + cos(x3))**8],"sub,add,n2,x1,x1,n2,n2,n2,add,cos,x3,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (cos(x1) + cos(x2) + cos(x3))**8],"sub,n2,x1,n2,n2,n2,add,cos,x3,add,cos,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 + x3 - ((cos(x2) + cos(x3**2))**2 + cos(x3))**8],"sub,add,x3,x1,n2,n2,n2,add,cos,x3,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x3**2 - (cos(x1**4) + cos(x2))**16],"sub,add,n2,x1,n2,x3,n2,n2,n2,n2,add,cos,n2,n2,x1,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - (cos(x2) + cos(x3))**32],"sub,add,n2,x1,x2,n2,n2,n2,n2,n2,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x1) + cos(x2) + cos(x3))**2 + cos(x3))**4 + sin(x1)],"sub,sin,x1,n2,n2,add,cos,x3,n2,add,cos,x1,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[-((cos(x2) + cos(x3**2))**2 + cos(x1**2))**8 + cos(x2)],"sub,cos,x2,n2,n2,n2,add,cos,n2,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 - (9*cos(x2)**2 + cos(x3))**4],"sub,n2,x1,n2,n2,add,cos,x3,n2,add,add,cos,x2,cos,x2,cos,x2",0.0,0.0,True
+1.0,0,1,[x1 + x2 - ((cos(x2) + cos(x3**2))**2 + cos(x1))**8],"sub,add,x1,x2,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x3**2 - (cos(x1) + cos(x2) + cos(x3))**16 + cos(x2)],"sub,add,n2,x3,cos,x2,n2,n2,n2,n2,add,cos,x1,add,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x1**2 + x2 - (cos(x1) + cos(x2) + cos(x3)**2)**8],"sub,add,n2,x1,x2,n2,n2,n2,add,cos,x1,add,n2,cos,x3,cos,x2",0.0,0.0,True
+1.0,0,1,[x2 + x3**2 - ((cos(x2) + cos(x3**2))**2 + cos(x1))**8],"sub,add,n2,x3,x2,n2,n2,n2,add,cos,x1,n2,add,cos,n2,x3,cos,x2",0.0,0.0,True

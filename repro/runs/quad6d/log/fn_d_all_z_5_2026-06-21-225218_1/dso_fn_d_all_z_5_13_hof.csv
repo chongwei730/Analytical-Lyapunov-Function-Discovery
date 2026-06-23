@@ -1,0 +1,101 @@
+r,count_on_policy,count_off_policy,expression,traversal,nmse_test,nmse_test_noiseless,success
+0.9974871110198174,0,1,[x4**2 + x6**2 + (x1 + x2)**2 + (x5 + sin(x3))**2 - cos(x2)],"add,add,n2,x6,add,mul,x4,x4,n2,add,x2,x1,sub,n2,add,sin,x3,x5,cos,x2",0.008728988365959697,0.008728988365959697,False
+0.9973116832884796,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**8*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,n2,mul,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.11186068472045683,0.11186068472045683,False
+0.9970901986601067,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*cos(x1 + x3 - x5 - x6)],"add,n2,x4,add,n2,x2,sub,n2,x1,mul,cos,sub,sub,add,x6,x5,x3,x1,sin,x1",0.03458490911960539,0.03458490911960539,False
+0.9970901986601067,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*cos(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,sin,x1",0.03458490911960539,0.03458490911960539,False
+0.9970436723528,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,mul,n2,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.11698288788047001,0.11698288788047001,False
+0.9970436723528,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,n2,mul,cos,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.11698288788047001,0.11698288788047001,False
+0.9969901029394618,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**8*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.09722527463194101,0.09722527463194101,False
+0.9968772756884712,0,1,[x4**2 + (-x2 - sin(x1) + sin(x3)**8*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,sub,n2,mul,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.07788906683936739,0.07788906683936739,False
+0.9968071902242844,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)**2*sin(x5)**2 - cos(x6)],"sub,add,add,mul,n2,sin,x5,n2,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.11249851545098076,0.11249851545098076,False
+0.9967180869647135,0,1,[x1**2 + x2**2 + x4**2 - cos(x1)*cos(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,cos,x1",0.048037622766821296,0.048037622766821296,False
+0.9966707963397613,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.09923154004198469,0.09923154004198469,False
+0.9966697463209764,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*sin(-x1 + x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,add,x6,x3,x5,x1,sin,x3",0.08189631579564068,0.08189631579564068,False
+0.9966697463209764,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*sin(-x1 + x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,add,x6,x5,x3,x1,sin,x3",0.08189631579564068,0.08189631579564068,False
+0.9966313843561235,0,1,[x1**2 + x2**2 + x4**2 + sin(x1)*sin(-x3 + x5 + x6)],"add,n2,x1,add,n2,x2,add,n2,x4,mul,sin,sub,add,x6,x5,x3,sin,x1",0.07560729256403641,0.07560729256403641,False
+0.996570961989793,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**2*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,n2,mul,cos,x5,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.132902089399994,0.132902089399994,False
+0.996570961989793,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**2*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,mul,n2,cos,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.132902089399994,0.132902089399994,False
+0.9964508604261213,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(-x1 + x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,add,x6,x5,x3,x1,sin,x1",0.07577691878111084,0.07577691878111084,False
+0.9964508604261213,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(-x1 + x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,add,x6,x3,x5,x1,sin,x1",0.07577691878111084,0.07577691878111084,False
+0.9963971384992043,0,1,[x4**2 + (-x2 - sin(x1) + sin(x3)**4*cos(x5))**2 - cos(x6)],"sub,add,n2,sub,mul,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.10815579910293469,0.10815579910293469,False
+0.9962391703973237,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)**4*sin(x5) - cos(x6)],"sub,add,add,mul,sin,x5,n2,n2,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.1000008466615845,0.1000008466615845,False
+0.9960667053816398,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.10472214959509736,0.10472214959509736,False
+0.9960578182580341,0,1,[x4**2 + (x2 + sin(x1 - x3)**8*cos(x5)**8*cos(x6)**4)**2],"add,mul,x4,x4,n2,add,x2,n2,n2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.46882831575231343,0.46882831575231343,False
+0.9960473924340877,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**8*sin(x5))**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,n2,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.10186792605475527,0.10186792605475527,False
+0.9960057995336744,0,1,[x4**2 + (x2 + sin(x1) + sin(x1 - x3)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,sin,sub,x1,x3,add,x2,sin,x1,n2,x4,cos,x6",0.0943354907561222,0.0943354907561222,False
+0.9959804200518363,0,1,[x4**2 + (x2 + sin(x1) + sin(x5)*cos(x3)**4)**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,n2,n2,cos,x3,add,x2,sin,x1,n2,x4,cos,x6",0.20081718602071214,0.20081718602071214,False
+0.9959078875503,0,1,[x4**2 + (x2 + sin(x1) + sin(x3**2)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,sin,n2,x3,add,x2,sin,x1,n2,x4,cos,x6",0.19479253286122025,0.19479253286122025,False
+0.9958496450348228,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,add,add,x6,x5,x3,sin,x1",0.019762954146865967,0.019762954146865967,False
+0.9958496450348228,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,add,add,x6,x3,x5,sin,x1",0.019762954146865967,0.019762954146865967,False
+0.995787684381677,0,1,[x4**2 + (-x2 - sin(x1) + sin(x3)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,sub,mul,cos,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.12518603299304193,0.12518603299304193,False
+0.9957724247364542,0,1,[x4**2 + (x2 - sin(x1 + x3)**8*cos(x5)**8*cos(x6)**4)**2],"add,mul,x4,x4,n2,sub,x2,n2,n2,mul,cos,x6,n2,mul,cos,x5,sin,add,x3,x1",0.4710604023456175,0.4710604023456175,False
+0.99576108824762,0,1,[x4**2 + (x2 - sin(x1 - x3)**8*cos(x5)**8*cos(x6)**4)**2],"add,mul,x4,x4,n2,sub,x2,n2,n2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.4648869932718514,0.4648869932718514,False
+0.9956268942961093,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(-2*x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,sub,add,x6,x5,x3,x3,sin,x1",0.07261081662483569,0.07261081662483569,False
+0.9955538111872493,0,1,[x4**2 + (x2 - sin(x1 + x3)**4*cos(x5)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,mul,cos,x5,sin,add,x3,x1",0.453328642328775,0.453328642328775,False
+0.9955485377546831,0,1,[x4**2 + (x2 + sin(x1 - x3)**4*cos(x5)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,add,x2,n2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.47945877645589147,0.47945877645589147,False
+0.9955433968221282,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**8*sin(x5)**2)**2 - cos(x6)],"sub,add,n2,add,n2,mul,sin,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.0817466596532987,0.0817466596532987,False
+0.9955241757390318,0,1,[x4**2 + (x2 - sin(x1 - x3)**8*cos(x5)**8*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,n2,mul,cos,x5,sin,sub,x3,x1",0.45447752722627477,0.45447752722627477,False
+0.9955158720279507,0,1,[x4**2 + (x2 - sin(x1 - x3)**8*cos(x5)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,mul,cos,x5,n2,sin,sub,x3,x1",0.45591785583027084,0.45591785583027084,False
+0.9954975008066734,0,1,[x4**2 + (x2 - sin(x1 - x3)**4*cos(x5)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.4897634588317752,0.4897634588317752,False
+0.995494131425546,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(-x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,x6,x5,x3,sin,x1",0.021766371268354723,0.021766371268354723,False
+0.9954820019531843,0,1,[x2**2 + x4**2 + (x1 + x2)**2 - sin(x1)*sin(-x3 + x5 + x6)],"add,n2,add,x1,x2,add,n2,x2,sub,n2,x4,mul,sin,sub,add,x6,x5,x3,sin,x1",0.01670299386658704,0.01670299386658704,False
+0.995449606706553,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*sin(x5))**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.10396344546951454,0.10396344546951454,False
+0.9954418154787383,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)**2*sin(x5) - cos(x6)],"sub,add,add,mul,sin,x5,n2,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.1137375788839132,0.1137375788839132,False
+0.9954068305301558,0,1,[x4**2 + (x2 - sin(x1 - x3)**4*cos(x5)**2*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,mul,cos,x5,n2,sin,sub,x3,x1",0.4962971024015812,0.4962971024015812,False
+0.9953398875463756,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)*cos(x5)**2)**2 - cos(x6)],"sub,add,n2,add,mul,n2,cos,x5,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.12928450159138485,0.12928450159138485,False
+0.9952725002500824,0,1,[x4**2 + (x2 - sin(x5)**4*sin(x1 - x3)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,mul,sin,x5,sin,sub,x3,x1",0.44654865976443353,0.44654865976443353,False
+0.9952539243712152,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)*sin(x5)**2 - cos(x6)],"sub,add,add,mul,n2,sin,x5,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.11789504032314457,0.11789504032314457,False
+0.9952359874004504,0,1,[x4**2 + (-x2 - sin(x1) + sin(x3)**2*sin(x5))**2 - cos(x6)],"sub,add,n2,sub,mul,sin,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.09197540870106821,0.09197540870106821,False
+0.9951364582349579,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)*sin(x5))**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.11311435136469614,0.11311435136469614,False
+0.9951314128913835,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.14231382722785857,0.14231382722785857,False
+0.9951123663273967,0,1,[x4**2 + (x2 - sin(x1 - x3**2)**4*cos(x5)**4*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,n2,mul,cos,x5,sin,sub,n2,x3,x1",0.5364737457899413,0.5364737457899413,False
+0.9950920480280919,0,1,[x4**2 + (x2 - sin(x1 - x3)**2*cos(x5)**2*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,mul,cos,x5,sin,sub,x3,x1",0.5523763119954403,0.5523763119954403,False
+0.9950755386011721,0,1,[x1**2 + x2**2 + x4**2 + sin(x1)*cos(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,add,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,sin,x1",0.03810368887570148,0.03810368887570148,False
+0.9950651712299149,0,1,[x4**2 + (x2 + sin(x1) + sin(x5)*cos(x3)**2)**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,n2,cos,x3,add,x2,sin,x1,n2,x4,cos,x6",0.21636190718074427,0.21636190718074427,False
+0.9950456250607146,0,1,[x4**2 + (x2 - sin(x1 - x3)**2*cos(x5)**2*cos(x5 + x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,add,x6,x5,n2,mul,cos,x5,sin,sub,x3,x1",0.49762721430692053,0.49762721430692053,False
+0.9950038718360447,0,1,[x4**2 + (x2 - sin(x1 + x3)**2*cos(x5)**2*cos(x6)**2)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,cos,x6,mul,cos,x5,sin,add,x3,x1",0.4943834604494528,0.4943834604494528,False
+0.9949588097057467,0,1,[x1**2 + x2**2 + x4**2 + sin(x1)*sin(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,sub,x6,x3,x5,x1,sin,x1",0.06571966990791299,0.06571966990791299,False
+0.9949588097057467,0,1,[x1**2 + x2**2 + x4**2 + sin(x1)*sin(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,sub,add,x6,x5,x3,x1,sin,x1",0.06571966990791299,0.06571966990791299,False
+0.9949160400120831,0,1,[x4**2 + (x2 - sin(x1 - x3)**8*cos(x5)**4*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,n2,mul,cos,x5,n2,sin,sub,x3,x1",0.530718339102051,0.530718339102051,False
+0.9948971225720976,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*sin(x5)**2)**2 - cos(x6)],"sub,add,n2,add,n2,mul,sin,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.08198195097144174,0.08198195097144174,False
+0.9948971225720976,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**4*sin(x5)**2)**2 - cos(x6)],"sub,add,n2,add,mul,n2,sin,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.08198195097144174,0.08198195097144174,False
+0.994832475184044,0,1,[x2**2 + x4**2 + x6**2 + (x5 + cos(x3))**2 - cos(x1**2)],"add,add,n2,x6,add,mul,x4,x4,n2,x2,sub,n2,add,cos,x3,x5,cos,n2,x1",0.010965474168816467,0.010965474168816467,False
+0.994832475184044,0,1,[x2**2 + x4**2 + x6**2 + (x5 + cos(x3))**2 - cos(x1**2)],"add,add,n2,x6,add,mul,x4,x4,n2,x2,sub,n2,add,cos,x3,x5,cos,mul,x1,x1",0.010965474168816467,0.010965474168816467,False
+0.9948309666566638,0,1,[x4**2 + (x2 + sin(x1) + sin(x3 + x5)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,sin,add,x3,x5,add,x2,sin,x1,n2,x4,cos,x6",0.09668518664436371,0.09668518664436371,False
+0.9948246434013314,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*sin(-2*x1 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,sub,add,x6,x5,x1,x1,sin,x3",0.05667901617065571,0.05667901617065571,False
+0.994764240704957,0,1,[x4**2 + (x2 - sin(x1 - x3)**4*cos(x5)**4*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,n2,mul,cos,x5,sin,sub,x3,x1",0.5541480112798349,0.5541480112798349,False
+0.9947429531811706,0,1,[x1**2 + x2**2 + x4**2 - sin(x2)*cos(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,sin,x2",0.19686252137792584,0.19686252137792584,False
+0.9947345632097669,0,1,[x4**2 + (x2 - sin(x5)**2*sin(x1 - x3)**4*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,sin,x5,n2,sin,sub,x3,x1",0.4739269341347281,0.4739269341347281,False
+0.9947148135135112,0,1,[x4**2 + (x2 + sin(x1) + sin(x5)*cos(x3))**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,cos,x3,add,x2,sin,x1,n2,x4,cos,x6",0.22670201919157873,0.22670201919157873,False
+0.9946964505577218,0,1,[x4**2 + (x2 + sin(x1 - x3)**2*cos(x5)**2*cos(x6))**2],"add,mul,x4,x4,n2,add,x2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.46997597373858074,0.46997597373858074,False
+0.9946485328099925,0,1,[x4**4 + (x2 + sin(x1) + sin(x3)**4*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,n2,sin,x3,add,x2,sin,x1,n2,n2,x4,cos,x6",0.09194084659044867,0.09194084659044867,False
+0.9946460462468193,0,1,[x4**2 + (x2 + sin(x1) + sin(x3)**2*sin(x5))**2 - cos(x6)],"sub,add,n2,add,mul,sin,x5,n2,sin,x3,add,x2,sin,x1,n2,x4,cos,x6",0.10972289775637492,0.10972289775637492,False
+0.9945952050014203,0,1,[x1**2 + x2**2 + x4**2 + sin(x3)*sin(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,sub,add,x6,x5,x3,x1,sin,x3",0.08577065435777581,0.08577065435777581,False
+0.9945868938590433,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*cos(x1 + x3 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,sin,x3",0.0379349889885451,0.0379349889885451,False
+0.9945837865211656,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)*sin(x5) - cos(x6)],"sub,add,add,mul,sin,x5,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.10109992536809008,0.10109992536809008,False
+0.9945336161310031,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*cos(x1 - x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,add,sub,add,x6,x5,x3,x1,sin,x1",0.03037568764769906,0.03037568764769906,False
+0.9944839803242166,0,1,[x2**2 + x3**2 + x4**2 + x5**2 + x6**2 + (x1 + x2)**2],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,x4,add,n2,x5,n2,x3,n2,x2",0.0,0.0,True
+0.9944364774816766,0,1,[x1**2 + x2**2 + x4**2 - sin(x1)*sin(2*x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,add,add,x6,add,x3,x3,x5,sin,x1",0.06438515873743758,0.06438515873743758,False
+0.9943602207882726,0,1,[x4**2 + (x2 - sin(x1 - x3)**4*cos(x5)**2*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,cos,x5,n2,sin,sub,x3,x1",0.5623737610762245,0.5623737610762245,False
+0.9942635933534726,0,1,[4*x2**2 + x3 + x4**2 + x5**2 + x6**2 + (x1 + x2)**2],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,x4,add,n2,x5,x3,n2,add,x2,x2",0.004740560694498721,0.004740560694498721,False
+0.9942173495701646,0,1,[x4**2 + (x2 - sin(x5)**2*sin(x1 - x3)**2*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,sin,x5,sin,sub,x3,x1",0.4851765972710566,0.4851765972710566,False
+0.994200113758556,0,1,[x2**2 + x4**4 + x6**2 + (x5 + cos(x3))**2 - cos(x1)],"add,add,n2,x6,add,n2,mul,x4,x4,n2,x2,sub,n2,add,cos,x3,x5,cos,x1",0.017697264932534505,0.017697264932534505,False
+0.9941342358492945,0,1,[x2*(x2 + sin(x1)) + x4**2 + sin(x3)**2 + sin(x5) - cos(x6)],"sub,add,add,add,sin,x5,n2,sin,x3,mul,x2,add,x2,sin,x1,n2,x4,cos,x6",0.5405239456202116,0.5405239456202116,False
+0.9941226782992161,0,1,[x4**2 + (x2 - sin(x6)**2*sin(x1 - x3)**4*cos(x5)**4)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,sin,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.31959050793365323,0.31959050793365323,False
+0.9940865833758757,0,1,[x2**2 + x3**2 + x4**2 + x5**2 + x6**2 + (x1 + x2)**2],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,x4,add,n2,x5,n2,x3,n2,x2",0.0,0.0,True
+0.9940446560651612,0,1,[x4**2 + (x2 - sin(x6)*sin(x1 - x3)**8*cos(x5)**4)**2],"add,mul,x4,x4,n2,sub,x2,mul,sin,x6,n2,n2,mul,cos,x5,n2,sin,sub,x3,x1",0.5381048137954888,0.5381048137954888,False
+0.9940419767389312,0,1,[x2**2 + x3 + x4**2 + x5**2 + x6**2 + (2*x1 + x2)**2],"add,add,n2,add,add,x2,x1,x1,n2,x6,add,add,n2,x4,add,n2,x5,x3,n2,x2",0.006000154816341083,0.006000154816341083,False
+0.9940419767389312,0,1,[x2**2 + x3 + x4**2 + x5**2 + x6**2 + (2*x1 + x2)**2],"add,add,n2,add,x2,add,x1,x1,n2,x6,add,add,n2,x4,add,n2,x5,x3,n2,x2",0.006000154816341083,0.006000154816341083,False
+0.9940253096705769,0,1,[x2**2 + x3 + x4**4 + x5**2 + x6**2 + (x1 + x2)**2],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,n2,x4,add,n2,x5,x3,n2,x2",0.0036321016080692057,0.0036321016080692057,False
+0.9939929827981355,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*sin(-x1 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,x6,x5,x1,sin,x3",0.015796669228995443,0.015796669228995443,False
+0.9939871126294344,0,1,[x4**2 + (x2 - sin(-x3 + x5 + x6)**2*cos(x1)**4)**2],"add,mul,x4,x4,n2,sub,x2,n2,mul,n2,cos,x1,sin,sub,x6,sub,x3,x5",0.5959278669898331,0.5959278669898331,False
+0.9939568216835657,0,1,[x1**2 + x2**2 + x4**2 + sin(x1)*sin(x3 + x4 - x5 - x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,sub,add,x6,x5,x3,x4,sin,x1",0.03606096395779041,0.03606096395779041,False
+0.9939564014389063,0,1,[x2**2 + x3 + x4**2 + x5**2 + x6**2 + (x1 + x2)**2],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,x4,add,n2,x5,x3,n2,x2",0.0062946589093318414,0.0062946589093318414,False
+0.9939530051309577,0,1,[x2**2 + x4**2 + x5**2 + x6**2 + (x1 + x2)**2 + sin(x3)],"add,add,n2,add,x2,x1,n2,x6,add,add,n2,x4,add,n2,x5,sin,x3,n2,x2",0.004464606564100738,0.004464606564100738,False
+0.9939370535129481,0,1,[x4**2 + (x2 + sin(x1) + sin(x3 - x5)**2*cos(x5))**2 - cos(x6)],"sub,add,n2,add,mul,cos,x5,n2,sin,sub,x5,x3,add,x2,sin,x1,n2,x4,cos,x6",0.13205944357179167,0.13205944357179167,False
+0.9939324915239827,0,1,[x4**2 + (x2 - sin(x1 + x3)**2*cos(x5)**2*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,cos,x5,sin,add,x3,x1",0.576694978938312,0.576694978938312,False
+0.9938827333400108,0,1,[x4**2 + (x2 - sin(x1 - x3)**2*cos(x5)**2*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,cos,x5,sin,sub,x3,x1",0.49446213439320463,0.49446213439320463,False
+0.9938823112294964,0,1,[x1**2 + x2**2 + x4**2 - sin(x3)*sin(-x3 + x5 + x6)],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,sin,sub,add,x6,x5,x3,sin,x3",0.03419887555262155,0.03419887555262155,False
+0.9938740508253582,0,1,[x1**2 + x2**2 - x2*cos(x1 + x3 - x5 - x6) + x4**2],"add,n2,x1,add,n2,x2,sub,n2,x4,mul,cos,sub,sub,add,x6,x5,x3,x1,x2",0.2022651919159914,0.2022651919159914,False
+0.9938535360863878,0,1,[x2**2 + x3 + x4**2 + x5**2 + x6**2 - x6 + (x1 + x2)**2],"add,add,n2,add,x2,x1,sub,n2,x6,x6,add,add,n2,x4,add,n2,x5,x3,n2,x2",0.004927319781829563,0.004927319781829563,False
+0.9938350740438691,0,1,[x4**2 + (x2 - sin(x1 - 2*x3)**2*cos(x5)**2*cos(x6))**2],"add,mul,x4,x4,n2,sub,x2,mul,cos,x6,n2,mul,cos,x5,sin,add,x3,sub,x3,x1",0.4376048142062155,0.4376048142062155,False

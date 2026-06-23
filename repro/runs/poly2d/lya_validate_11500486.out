@@ -1,0 +1,160 @@
+[validate] host=cn1009 start=2026-06-21T22:09:03-05:00
+MainProcess| 2026-06-21 22:09:17,093,93 multiprocessing INFO STARTING NEW RUN ==========
+MainProcess| 2026-06-21 22:09:17,093,93 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+MainProcess| 2026-06-21 22:09:17,093,93 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+MainProcess| 2026-06-21 22:09:17,099,99 multiprocessing INFO               variables expression                                                train_spec test_spec function_set
+name                                                                                                               
+fn_d_all_y_5          2  0*x1+0*x2  {"x1":{"U":[-3.14,3.14,15000]}, "x2":{"U":[-6,6,15000]}}      None         Koza
+              variables expression                                                train_spec test_spec function_set
+name                                                                                                               
+fn_d_all_y_5          2  0*x1+0*x2  {"x1":{"U":[-3.14,3.14,15000]}, "x2":{"U":[-6,6,15000]}}      None         Koza
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/pendulum/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_y_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+MainProcess| 2026-06-21 22:09:17,192,192 multiprocessing INFO [BASELINE_TESTING NOW] dataset=fn_d_all_y_5 	| baseline=transformer 	| seed=1 	| data_samples=15000 	| noise=0.0
+MainProcess| 2026-06-21 22:09:17,208,208 multiprocessing INFO [RUN SETTINGS]: test_dataset=fn_d_all_y_5  batch_outer_datasets=24 pre_train=False load_pre_trained_path= priority_queue_training=True gp_meld=True model=TransformerTreeEncoderController train_path= risk_seeking_pg_train=True
+[RUN SETTINGS]: test_dataset=fn_d_all_y_5  batch_outer_datasets=24 pre_train=False load_pre_trained_path= priority_queue_training=True gp_meld=True model=TransformerTreeEncoderController train_path= risk_seeking_pg_train=True
+MainProcess| 2026-06-21 22:09:17,273,273 multiprocessing INFO Running model : TransformerTreeEncoderController
+Running model : TransformerTreeEncoderController
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/pendulum/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_y_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+MainProcess| 2026-06-21 22:09:17,281,281 multiprocessing INFO Function set: ['x1', 'x2', 'add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/pendulum/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_y_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- BUILDING PRIOR START -------------
+WARNING: Skipping invalid 'RelationalConstraint' with arguments {'targets': [], 'effectors': [], 'relationship': None}. Reason: Prior disabled.
+WARNING: Skipping invalid 'RepeatConstraint' with arguments {'tokens': 'const', 'min_': None, 'max_': 5}. Reason: Uses Tokens not in the Library.
+WARNING: Skipping invalid 'InverseUnaryConstraint' with arguments {}. Reason: There are no inverse unary Token pairs in the Library.
+WARNING: Skipping invalid 'ConstConstraint' with arguments {}. Reason: Prior disabled.
+WARNING: Skipping invalid 'NoInputsConstraint' with arguments {}. Reason: All terminal tokens are input variables, so allsequences will have an input variable.
+WARNING: Skipping invalid 'UniformArityPrior' with arguments {}. Reason: Prior disabled.
+LengthConstraint: Sequences have minimum length 10.
+                  Sequences have maximum length 15.
+TrigConstraint: [sin, cos] cannot be a descendant of [sin, cos].
+SoftLengthPrior: No description available.
+-- BUILDING PRIOR END ---------------
+
+MainProcess| 2026-06-21 22:09:17,411,411 multiprocessing INFO Transformer overwriting hidden size to input_dim 128
+Transformer overwriting hidden size to input_dim 128
+MainProcess| 2026-06-21 22:09:19,542,542 multiprocessing INFO Encoder params: {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}
+Encoder params: {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}
+MainProcess| 2026-06-21 22:09:19,739,739 multiprocessing INFO TransformerTreeEncoderController parameters: 4033756 	 | trainable : 4033756
+TransformerTreeEncoderController parameters: 4033756 	 | trainable : 4033756
+MainProcess| 2026-06-21 22:09:19,789,789 multiprocessing INFO GP CONFIG : {'verbose': False, 'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}
+GP CONFIG : {'verbose': False, 'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}
+MainProcess| 2026-06-21 22:09:19,977,977 multiprocessing INFO config: {'experiment': {'logdir': './log', 'seed': 13, 'timestamp': '2026-06-21-220917', 'task_name': 'fn_d_all_y_5', 'save_path': './log/fn_d_all_y_5_2026-06-21-220917_1'}, 'task': {'task_type': 'regression', 'dataset': 'fn_d_all_y_5', 'function_set': ['add', 'sub', 'mul', 'sin', 'cos', 'n2'], 'metric': 'lyapunov_risk', 'metric_params': [1.0], 'extra_metric_test': None, 'extra_metric_test_params': [], 'threshold': 1e-12, 'protected': False, 'reward_noise': 0.0, 'reward_noise_type': 'r', 'normalize_variance': False, 'decision_tree_threshold_set': []}, 'training': {'n_epochs': None, 'n_samples': 3000, 'batch_size': 500, 'epsilon': 0.1, 'baseline': 'R_e', 'alpha': 0.5, 'b_jumpstart': False, 'n_cores_batch': 1, 'complexity': 'token', 'const_optimizer': 'scipy', 'const_params': {'method': 'L-BFGS-B', 'options': {'gtol': 0.001}}, 'verbose': True, 'debug': 0, 'early_stopping': True, 'hof': 100, 'use_memory': False, 'memory_capacity': 1000.0, 'warm_start': None, 'memory_threshold': None, 'save_all_epoch': False, 'save_summary': False, 'save_positional_entropy': False, 'save_pareto_front': True, 'save_cache': False, 'save_cache_r_min': 0.9, 'save_freq': 1, 'save_token_count': False}, 'state_manager': {'observe_action': False, 'observe_parent': True, 'observe_sibling': True, 'observe_dangling': False, 'embedding': True, 'embedding_size': 64}, 'controller': {'max_length': 64, 'cell': 'lstm', 'num_layers': 1, 'num_units': 64, 'initializer': 'zeros', 'learning_rate': 0.0003, 'optimizer': 'adam', 'entropy_weight': 0.005, 'entropy_gamma': 0.8, 'pqt': True, 'pqt_k': 10, 'pqt_batch_size': 1, 'pqt_weight': 200.0, 'pqt_use_pg': False, 'summary': False, 'rl_weight': 1.0}, 'gp_meld': {'generations': 35, 'p_crossover': 0.5, 'p_mutate': 0.5, 'tournament_size': 7, 'train_n': 50, 'mutate_tree_max': 3}, 'prior': {'relational': {'targets': [], 'effectors': [], 'relationship': None}, 'length': {'min_': 10, 'max_': 15}, 'repeat': {'tokens': 'const', 'min_': None, 'max_': 5}, 'inverse': {}, 'trig': {}, 'const': {}, 'no_inputs': {}, 'uniform_arity': {}, 'soft_length': {'loc': 8, 'scale': 5}}, 'postprocess': {'show_count': 5, 'save_plots': True}, 'model': 'TransformerTreeEncoderController', 'function_names_str': 'x1,x2,add,sub,mul,sin,cos,n2', 'nesymres_train_config': {'architecture': {'sinuisodal_embeddings': False, 'dec_pf_dim': 32, 'dec_layers': 1, 'dim_hidden': 128, 'lr': 0.0001, 'dropout': 0, 'num_features': 1, 'ln': True, 'N_p': 0, 'num_inds': 64, 'activation': 'relu', 'bit16': False, 'norm': True, 'linear': True, 'input_normalization': False, 'src_pad_idx': 0, 'trg_pad_idx': 0, 'length_eq': 20, 'n_l_enc': 3, 'mean': 0.5, 'std': 0.5, 'dim_input': 64, 'num_heads': 2, 'output_dim': 10}}}
+
+-- BUILDING DATASET START -----------
+Benchmark path                 : /users/9/chen8596/LyaDis/repro/runs/pendulum/libs/sd3/dso/dso/task/regression/benchmarks_bkup_1.csv
+Generated data for benchmark   : fn_d_all_y_5
+-- BUILDING DATASET END -------------
+
+Function set                   : Koza --> ['add', 'sub', 'mul', 'sin', 'cos', 'n2']
+
+-- RUNNING EPOCHS START -------------
+torch.Size([500, 19])
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+MainProcess| 2026-06-21 22:12:56,182,182 multiprocessing INFO Genetic Porgramming Runtime 46.4979142609518
+Genetic Porgramming Runtime 46.4979142609518
+
+=========================PGD Collection Starts=========================
+
+MainProcess| 2026-06-21 22:12:59,456,456 multiprocessing INFO created temp directory /tmp/pymp-ds76aliy
+SpawnPoolWorker-1| 2026-06-21 22:13:06,648,648 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-1| 2026-06-21 22:13:06,648,648 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-1| 2026-06-21 22:13:06,648,648 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-1| 2026-06-21 22:13:06,652,652 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-8| 2026-06-21 22:13:06,784,784 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-8| 2026-06-21 22:13:06,784,784 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-8| 2026-06-21 22:13:06,784,784 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-8| 2026-06-21 22:13:06,786,786 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-6| 2026-06-21 22:13:06,861,861 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-6| 2026-06-21 22:13:06,861,861 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-6| 2026-06-21 22:13:06,861,861 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-6| 2026-06-21 22:13:06,862,862 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-4| 2026-06-21 22:13:07,420,420 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-4| 2026-06-21 22:13:07,420,420 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-4| 2026-06-21 22:13:07,420,420 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-4| 2026-06-21 22:13:07,427,427 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-2| 2026-06-21 22:13:07,466,466 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-2| 2026-06-21 22:13:07,466,466 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-2| 2026-06-21 22:13:07,466,466 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-2| 2026-06-21 22:13:07,476,476 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-7| 2026-06-21 22:13:07,606,606 multiprocessing INFO STARTING NEW RUN ==========
+SpawnPoolWorker-7| 2026-06-21 22:13:07,606,606 multiprocessing INFO SEE LOG AT : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-7| 2026-06-21 22:13:07,606,606 multiprocessing INFO See log at : ./logs/all_Lyapunov_test_dso-fn_d_all_y_01_log.txt
+SpawnPoolWorker-7| 2026-06-21 22:13:07,612,612 multiprocessing INFO child process calling self.run()
+SpawnPoolWorker-6| 2026-06-21 22:13:08,177,177 multiprocessing INFO process shutting down
+SpawnPoolWorker-6| 2026-06-21 22:13:08,178,178 multiprocessing INFO process exiting with exitcode 0
+SpawnPoolWorker-8| 2026-06-21 22:13:08,178,178 multiprocessing INFO process shutting down
+SpawnPoolWorker-4| 2026-06-21 22:13:08,178,178 multiprocessing INFO process shutting down
+SpawnPoolWorker-1| 2026-06-21 22:13:08,179,179 multiprocessing INFO process shutting down
+SpawnPoolWorker-2| 2026-06-21 22:13:08,179,179 multiprocessing INFO process shutting down
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/multiprocessing/pool.py", line 51, in starmapstar
+    return list(itertools.starmap(args[0], args[1]))
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/utils/train.py", line 1339, in pgd_check
+    sympy_torch = sympytorch.SymPyModule(expressions=[sympy]).to("cuda:1")
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1145, in to
+    return self._apply(convert)
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 797, in _apply
+    module._apply(fn)
+  [Previous line repeated 7 more times]
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 820, in _apply
+    param_applied = fn(param)
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1143, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/site-packages/torch/cuda/__init__.py", line 247, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/Lyapunov_test_dso.py", line 519, in <module>
+    main(dataset)
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/Lyapunov_test_dso.py", line 162, in main
+    result = perform_run(task_input)
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/Lyapunov_test_dso.py", line 109, in perform_run
+    result = top_main(
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/Lyapunov_test_dso.py", line 347, in top_main
+    optomize_at_test(
+  File "/users/9/chen8596/LyaDis/repro/runs/pendulum/utils/train.py", line 395, in optomize_at_test
+    pgd_output = pool.starmap(pgd_check, [(i.sympy_expr[0], pgd_initial, low_bound, up_bound) for i in programs if (not i.invalid)])
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/multiprocessing/pool.py", line 372, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+  File "/users/9/chen8596/miniconda3/envs/alfd/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx
+MainProcess| 2026-06-21 22:13:08,323,323 multiprocessing INFO process shutting down
