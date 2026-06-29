@@ -281,7 +281,12 @@ def top_main(
 
     
     prior = make_prior(test_task.library, config["prior"])
-    
+
+    # Controller selector: env override lets jobs pick the generator without code edits.
+    model = os.environ.get("LYA_CONTROLLER", model)
+    if model.lower() in ("diffusion", "diffusioncontroller"):
+        model = "DiffusionController"
+
     if model == "TransformerTreeEncoderController":
         config["state_manager"]["embedding"] = True
         config["state_manager"]["embedding_size"] = 64  # 64 also good
@@ -298,7 +303,27 @@ def top_main(
             dynamics_embedding_size=prepare_encoder_input()[-1],
             dynamics_dimension=len(dynamics()[0])
         ).to(DEVICE)
-    
+
+    elif model == "DiffusionController":
+        from models.diffusion import DiffusionController
+        ctrl_cfg = config["controller"]
+        controller = DiffusionController(
+            prior,
+            test_task.library,
+            test_task,
+            nesymres_train_config["architecture"],
+            config_state_manager=config["state_manager"],
+            max_length=ctrl_cfg.get("max_length", 30),
+            pqt=ctrl_cfg.get("pqt", False),
+            pqt_k=ctrl_cfg.get("pqt_k", 10),
+            pqt_batch_size=ctrl_cfg.get("pqt_batch_size", 1),
+            rl_weight=ctrl_cfg.get("rl_weight", 1.0),
+            learning_rate=ctrl_cfg.get("learning_rate") or 1e-3,
+            entropy_weight=ctrl_cfg.get("entropy_weight", 0.005),
+            vocab_size=prepare_encoder_input()[1],
+            lam=float(os.environ.get("LYA_LAMBDA", ctrl_cfg.get("diffusion_lambda", 0.5))),
+        ).to(DEVICE)
+
     if model != "gp":
         log_and_print(
             f"{model} parameters: {sum(p.numel() for p in controller.parameters())} \t | "  # pyright: ignore
