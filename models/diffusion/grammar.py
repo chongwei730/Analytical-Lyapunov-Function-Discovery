@@ -55,6 +55,27 @@ class Grammar:
                 return True
         return False
 
+    # --- random-order (Phase-3) completion guard (design doc §7) ----------------
+    def contiguous_prefix(self, grid):
+        """Real tokens from position 0 up to the first non-real slot.
+
+        Any id >= L is a boundary: PAD (=L), MASK (=L+1), and the denoiser's
+        mask sentinel (=L) all stop the scan. Unlike `_real`, this does NOT skip
+        over interior gaps, so it reflects the truly-revealed left prefix.
+        """
+        out = []
+        for tok in grid:
+            if int(tok) >= self.L:
+                break
+            out.append(int(tok))
+        return out
+
+    def is_complete_grid(self, grid):
+        """§7 guard for random-order sampling: complete iff the gap-free prefix
+        from position 0 is exactly one tree. Prevents false completion across
+        interior MASKs (which `is_complete` would skip via `_real`)."""
+        return self.is_complete(self.contiguous_prefix(grid))
+
     # --- open ancestors (pre-order), used for structural constraints ------------
     def open_ancestors(self, tokens):
         """Operator tokens on the path to the next slot (pre-order), innermost last."""

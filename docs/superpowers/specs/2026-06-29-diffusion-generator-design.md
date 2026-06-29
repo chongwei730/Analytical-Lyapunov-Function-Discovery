@@ -160,6 +160,36 @@ input to ONE encoder-only transformer:
   smoke-test pattern) → produces a `[TEST RESULT]` end-to-end.
 - **A/B harness:** reuse `repro/*_anvil` scripts; add a diffusion config; compare to the transformer sweep.
 
+## 10b. Implementation status — Phase-3 random-order sampler (added 2026-06-29)
+
+**Status: implemented (M5, partial).** The any-order ("pure diffusion") reverse sampler is built
+and config-selectable; it complements the pre-order semi-AR baseline rather than replacing it.
+
+- **Why it matters:** the denoiser is *trained* on random-subset masking (`DiffusionController._denoise_ce`
+  masks each position i.i.d. with prob `t`), so an any-order reverse sampler matches the training
+  distribution; the Phase-1 pre-order sampler is semi-autoregressive and only exercises one reveal order.
+- **Completion guard (§7) — `Grammar.is_complete_grid` / `Grammar.contiguous_prefix`:** the old
+  `is_complete` filters MASK/PAD via `_real()`, so a gappy grid (`[+, MASK, x1, 1]`) *falsely* completes.
+  The guard scans the **contiguous, gap-free prefix from position 0** (any id `>= L` — PAD, MASK, or the
+  denoiser mask sentinel — is a boundary) and only declares completion there. No-interior-MASK ⇒ no false stop.
+- **Sampler — `sampler.diffusion_sample_random`:** start all-MASK → at each step pick the next position
+  from a per-sample **random permutation** (`rng`, or an explicit `order` for tests) → lightweight
+  `valid_token_mask` over the gap-skipping revealed context → masked-softmax sample → freeze (carry-over)
+  → early-stop on `is_complete_grid` → repair fallback at `max_len`. PAD is never emitted by the denoiser
+  (head size `L`); when the revealed context is already complete the mask falls back to terminals and the
+  stray token is trimmed at `_decode` (minimal-complete-prefix, else `grammar.repair`).
+- **Controller wiring:** `DiffusionController(sampler_order="preorder"|"random")` (config/`**kwargs`),
+  routes `sample()` to the chosen sampler; transformer arm and training loss untouched.
+- **Tests (TDD):** `tests/test_diffusion_grammar.py` (+2: contiguous-prefix, completion guard),
+  `tests/test_diffusion_sampler.py` (3: valid-complete, expected-tree, out-of-order guard),
+  `tests/test_diffusion_controller_order.py` (2: routing + validity). All green.
+- **Known limitations:** (a) the lightweight mask over a gappy context is best-effort — structural
+  constraints (nested-trig, dangling) are exact only once the relevant ancestors are revealed, so
+  random-order relies more on `repair`; (b) no tight-completion terminal pressure in random order yet
+  (pre-order has it), so completion rates lean on repair; (c) sampler still recomputes a full-batch
+  denoiser forward per step reading one position/sample (vectorization is future work). Validate
+  end-to-end speed/quality on a GPU node, not the CPU login node.
+
 ## 11. Milestones (build order)
 - **M1 — generation module (standalone, test-first):** library/arity, pre-order ser/de, `is_complete`,
   valid-token mask, sampler with early-stop, repair, constant-opt, dummy denoiser. All unit tests green.
@@ -167,7 +197,8 @@ input to ONE encoder-only transformer:
   `DiffusionController` satisfying the contract; `sample()` returns valid `Batch` fields.
 - **M3 — FKL training + integration:** ELBO + FKL loss; wire into `train.py`; pendulum smoke test passes.
 - **M4 — A/B:** run the diffusion arm across the 13 systems; compare to the transformer reproduction.
-- **M5 — extensions (optional):** random-order sampler (+guard), RKL/token-GRPO objective, BFS ablation.
+- **M5 — extensions (optional):** ~~random-order sampler (+guard)~~ **DONE (see §10b)**;
+  RKL/token-GRPO objective, BFS ablation remain.
 
 ## 12. Open items to confirm
 - **D7 (RL objective):** FKL-first is proposed; confirm before M3 (RKL/GRPO remains a documented Phase-3

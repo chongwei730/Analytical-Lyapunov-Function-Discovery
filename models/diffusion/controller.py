@@ -19,7 +19,7 @@ from dso.prior import LengthConstraint
 
 from .grammar import Grammar
 from .denoiser import MaskedDiffusionDenoiser
-from .sampler import diffusion_sample
+from .sampler import diffusion_sample, diffusion_sample_random
 
 
 class DiffusionController(nn.Module):
@@ -27,7 +27,7 @@ class DiffusionController(nn.Module):
                  max_length=30, pqt=False, pqt_k=10, pqt_batch_size=1,
                  rl_weight=1.0, learning_rate=1e-3, entropy_weight=0.005,
                  vocab_size=None, lam=0.5, max_const=10,
-                 d_model=128, nlayers=4, nhead=4, **kwargs):
+                 d_model=128, nlayers=4, nhead=4, sampler_order="preorder", **kwargs):
         super().__init__()
         self.prior = prior
         self.task = task
@@ -41,6 +41,7 @@ class DiffusionController(nn.Module):
         self.pqt_k = pqt_k
         self.pqt_batch_size = pqt_batch_size
         self.lam = float(lam)
+        self.sampler_order = str(sampler_order)          # "preorder" (semi-AR) | "random" (Phase-3 any-order)
         self.save_true_log_likelihood = False
         self.true_eq = []
 
@@ -64,8 +65,12 @@ class DiffusionController(nn.Module):
     # ---- sampling --------------------------------------------------------------
     def sample(self, n, input_=None):
         dyn = self._as_dyn(input_, n)
-        seqs = diffusion_sample(self.denoiser, self.grammar, n, self.max_length,
-                                dyn, device=self.device)
+        if self.sampler_order == "random":
+            seqs = diffusion_sample_random(self.denoiser, self.grammar, n, self.max_length,
+                                           dyn, device=self.device)
+        else:
+            seqs = diffusion_sample(self.denoiser, self.grammar, n, self.max_length,
+                                    dyn, device=self.device)
         term = int(self.grammar.terminal_tokens[0])
         actions = np.full((n, self.max_length), term, dtype=np.int32)
         for i, toks in enumerate(seqs):

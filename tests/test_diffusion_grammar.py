@@ -69,6 +69,26 @@ def test_max_const():
     assert m[4]
 
 
+def test_contiguous_prefix_stops_at_gap():
+    G = g()
+    # real tokens 0..7; anything >= L (PAD=8, mask_id=8, MASK=9) is a boundary
+    assert G.contiguous_prefix([0, 4, 6, G.MASK, G.MASK]) == [0, 4, 6]
+    assert G.contiguous_prefix([0, G.MASK, 4, 6]) == [0]          # stop at first gap
+    assert G.contiguous_prefix([0, G.L, 4, 6]) == [0]            # mask_id == L is also a boundary
+    assert G.contiguous_prefix([G.MASK, 4]) == []                # leading gap -> empty
+
+
+def test_is_complete_grid_guard():
+    G = g()
+    # gappy grid: _real()-filtering would falsely see [0,4,6] (x1+1) as complete
+    assert G.is_complete([0, G.MASK, 4, 6])             # OLD check: falsely True (documents the bug)
+    assert not G.is_complete_grid([0, G.MASK, 4, 6])    # GUARD: interior gap -> not complete
+    # genuinely complete contiguous prefix with masked tail -> complete
+    assert G.is_complete_grid([0, 4, 6, G.MASK, G.MASK])
+    # all-masked / leading gap -> not complete
+    assert not G.is_complete_grid([G.MASK, G.MASK, G.MASK])
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for fn in fns:
